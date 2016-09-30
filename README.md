@@ -1,8 +1,13 @@
 Ansible IPA Lookup plugins
 ==========
 
+- [Introduction](#introduction)
 - [Usage](#usage)
  - [Group](#group)
+
+# Introduction
+Ansible lookup plugins to gather information about IPA objects using IPA API.
+All plugins return a dictionary with all information as returned by the API.
 
 # Usage
 
