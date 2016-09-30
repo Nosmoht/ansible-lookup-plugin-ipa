@@ -2,8 +2,14 @@ Ansible IPA Lookup plugins
 ==========
 
 - [Usage](#usage)
+ - [Group](#group)
 
 # Usage
+
+## Group
+
+Gather information about IPA group "ipausers" and show them.
+
 ```yaml
 ---
 - hosts: localhost
@@ -15,7 +21,7 @@ Ansible IPA Lookup plugins
   tasks:
   - name: get IPA group information
     set_fact:
-      ipa_group: '{{ lookup("ipa_group", name="ipausers", ipa_host=ipa_host, ipa_user=ipa_user, ipa_pass=ipa_pass) }}'
+      ipa_group: '{{ lookup("ipa_group", "ipausers", ipa_host=ipa_host, ipa_user=ipa_user, ipa_pass=ipa_pass) }}'
 
   - debug:
       var: ipa_group
